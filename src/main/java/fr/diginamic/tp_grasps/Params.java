@@ -7,6 +7,8 @@ public class Params {
 	private String dateReservation;
 	private String typeReservation;
 	
+	
+
 	/** Getter
 	 * @return the identifiantClient
 	 */
