@@ -3,7 +3,7 @@ package fr.diginamic.tp_grasps;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public abstract class UtilsDate {
+public final class UtilsDate {
 	/** formatter */
 	private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 	

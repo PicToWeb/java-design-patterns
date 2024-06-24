@@ -2,6 +2,7 @@ package fr.diginamic.tp_grasps;
 
 import fr.diginamic.tp_grasps.beans.Client;
 import fr.diginamic.tp_grasps.beans.Reservation;
+import fr.diginamic.tp_grasps.beans.ReservationFactory;
 import fr.diginamic.tp_grasps.beans.TypeReservation;
 import fr.diginamic.tp_grasps.daos.ClientDao;
 import fr.diginamic.tp_grasps.daos.TypeReservationDao;
@@ -30,9 +31,10 @@ public class ReservationController {
 	public Reservation creerReservation(Params params) {
 
 		// 5) Création de la réservation
-		Reservation reservation = new Reservation(UtilsDate.toDate(params.getDateReservation()));
-		reservation.setNbPlaces(params.getNbPlaces());
-		reservation.setClient(chercherClient(params));
+//		Reservation reservation = new Reservation(UtilsDate.toDate(params.getDateReservation()));
+//		reservation.setNbPlaces(params.getNbPlaces());
+//		reservation.setClient(chercherClient(params));
+		Reservation reservation = ReservationFactory.getInstance(params);
 
 		return montantReservation(reservation, params);
 	}

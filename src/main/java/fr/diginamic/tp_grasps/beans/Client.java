@@ -12,20 +12,19 @@ public class Client {
 
 	@Id
 	private String identifiantClient;
-	
 	private boolean premium;
 	
 	@OneToMany(mappedBy = "client")
 	private List<Reservation> reservations = new ArrayList<>();
 	
-	public Client() {
-		
-	}
 
-	public Client(String identifiantClient, boolean premium) {
+	public Client(String identifiantClient) {
 		super();
 		this.identifiantClient = identifiantClient;
-		this.premium = premium;
+	}
+	
+	public int applyReduction(double montant) {
+		return montant;
 	}
 
 	/** Getter
