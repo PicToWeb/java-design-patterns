@@ -2,7 +2,7 @@ package fr.diginamic.factory;
 
 public class ElementFactory {
 	
-	public Element createElement(ElementType elementType, String nom, int valeur, Unite unite) {
+	public static Element getInstance(ElementType elementType, String nom, int valeur, Unite unite) {
         switch (elementType) {
             case INGREDIENT:
                 return new Ingredient(nom, valeur, unite);
@@ -11,7 +11,7 @@ public class ElementFactory {
             case ADDITIF:
                 return new Additif(nom, valeur, unite);
             default:
-                throw new IllegalArgumentException("Elément non pris en charge");
+               return null;
         }
     }
 }

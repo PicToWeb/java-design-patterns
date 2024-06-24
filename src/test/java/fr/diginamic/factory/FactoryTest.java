@@ -1,6 +1,7 @@
 package fr.diginamic.factory;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -11,12 +12,13 @@ public class FactoryTest {
 	@Test
 	public void testVerifierAdditif() {
 		
-		ElementFactory facto = new ElementFactory();
-		Element additif = facto.createElement(ElementType.ADDITIF, "farine", 50, Unite.MICRO_GRAMMES);
+		
+		Element additif = ElementFactory.getInstance(ElementType.ADDITIF, "farine", 50, Unite.MICRO_GRAMMES);
 
 		
 		Additif adControl = new Additif("farine",50,Unite.MICRO_GRAMMES);
 		
+		assertTrue(additif instanceof Additif);
 		assertEquals(additif.getName(), adControl.getName());
 		assertEquals(additif.getUnite(), adControl.getUnite());
 		assertEquals(additif.getValue(), adControl.getValue());
@@ -27,8 +29,7 @@ public class FactoryTest {
 	@Test
 	public void testVerifierIngredient() {
 		
-		ElementFactory facto = new ElementFactory();
-		Element ingred = facto.createElement(ElementType.INGREDIENT, "farine", 50, Unite.MICRO_GRAMMES);
+		Element ingred = ElementFactory.getInstance(ElementType.INGREDIENT, "farine", 50, Unite.MICRO_GRAMMES);
 
 		
 		Ingredient adControl = new Ingredient("farine",50,Unite.MICRO_GRAMMES);
@@ -42,8 +43,7 @@ public class FactoryTest {
 	@Test
 	public void testVerifierIngredientNotOk() {
 		
-		ElementFactory facto = new ElementFactory();
-		Element ingred = facto.createElement(ElementType.ADDITIF, "farine", 50, Unite.MICRO_GRAMMES);
+		Element ingred = ElementFactory.getInstance(ElementType.ADDITIF, "farine", 50, Unite.MICRO_GRAMMES);
 
 		
 		Additif adControl = new Additif("farine",50,Unite.MICRO_GRAMMES);
@@ -58,8 +58,7 @@ public class FactoryTest {
 	@Test
 	public void testVerifierAllergene() {
 		
-		ElementFactory facto = new ElementFactory();
-		Element ingred = facto.createElement(ElementType.ALLERGENE, "farine", 50, Unite.MICRO_GRAMMES);
+		Element ingred = ElementFactory.getInstance(ElementType.ALLERGENE, "farine", 50, Unite.MICRO_GRAMMES);
 
 		
 		Allergene adControl = new Allergene("farine",50,Unite.MICRO_GRAMMES);
