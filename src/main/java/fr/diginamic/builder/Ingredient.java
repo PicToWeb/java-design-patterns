@@ -25,7 +25,7 @@ class Ingredient {
 	/** Setter for name
 	 * @param name the name to set
 	 */
-	public void setName(String name) {
+	void setName(String name) {
 		this.name = name;
 	}
 
@@ -39,7 +39,7 @@ class Ingredient {
 	/** Setter for qteMilligrammes
 	 * @param qteMilligrammes the qteMilligrammes to set
 	 */
-	public void setQteMilligrammes(double qteMilligrammes) {
+	void setQteMilligrammes(double qteMilligrammes) {
 		this.qteMilligrammes = qteMilligrammes;
 	}
 	

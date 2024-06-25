@@ -22,7 +22,7 @@ class Marque {
 	/** Setter for name
 	 * @param name the name to set
 	 */
-	public void setName(String name) {
+	void setName(String name) {
 		this.name = name;
 	}
 

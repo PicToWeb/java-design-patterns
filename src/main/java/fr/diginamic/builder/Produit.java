@@ -17,8 +17,8 @@ public class Produit {
 	 * @param nom
 	 * @param grade
 	 */
-	Produit() {
-
+	Produit(String nom) {
+		this.nom = nom;
 	}
 
 	/** Getter for nom
@@ -31,7 +31,7 @@ public class Produit {
 	/** Setter for nom
 	 * @param nom the nom to set
 	 */
-	protected void setNom(String nom) {
+	void setNom(String nom) {
 		this.nom = nom;
 	}
 
@@ -45,7 +45,7 @@ public class Produit {
 	/** Setter for grade
 	 * @param grade the grade to set
 	 */
-	protected void setGrade(String grade) {
+	void setGrade(String grade) {
 		this.grade = grade;
 	}
 
@@ -61,7 +61,7 @@ public class Produit {
 	/** Setter for additifs
 	 * @param additifs the additifs to set
 	 */
-	protected void setAdditifs(Set<Additif> additifs) {
+	void setAdditifs(Set<Additif> additifs) {
 		this.additifs = additifs;
 	}
 
@@ -75,7 +75,7 @@ public class Produit {
 	/** Setter for allergenes
 	 * @param allergenes the allergenes to set
 	 */
-	protected void setAllergenes(Set<Allergene> allergenes) {
+	void setAllergenes(Set<Allergene> allergenes) {
 		this.allergenes = allergenes;
 	}
 
@@ -89,7 +89,7 @@ public class Produit {
 	/** Setter for ingredients
 	 * @param ingredients the ingredients to set
 	 */
-	protected void setIngredients(Set<Ingredient> ingredients) {
+	void setIngredients(Set<Ingredient> ingredients) {
 		this.ingredients = ingredients;
 	}
 
@@ -103,7 +103,7 @@ public class Produit {
 	/** Setter for categorie
 	 * @param categorie the categorie to set
 	 */
-	public void setCategorie(Categorie categorie) {
+	void setCategorie(Categorie categorie) {
 		this.categorie = categorie;
 	}
 
@@ -117,7 +117,7 @@ public class Produit {
 	/** Setter for marque
 	 * @param marque the marque to set
 	 */
-	public void setMarque(Marque marque) {
+	void setMarque(Marque marque) {
 		this.marque = marque;
 	}
 
