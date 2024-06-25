@@ -2,6 +2,7 @@ package fr.diginamic.singleton;
 
 import java.util.HashMap;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 public class Singleton {
 	
@@ -17,6 +18,14 @@ public class Singleton {
 		return DONNEE;
 	}
 	
+	public String getValeur(String cle) {
+		return listDonnee.get(cle);
+	}
+	
+	public Set<String> getCles(){
+		return listDonnee.keySet();
+	}
+	
 	private void init() {
 		ResourceBundle configuration = ResourceBundle.getBundle("configuration");
 		configuration.keySet().stream()
@@ -26,4 +35,5 @@ public class Singleton {
 	public HashMap<String,String> getProprietes(){
 		return listDonnee;
 	}
+	
 }

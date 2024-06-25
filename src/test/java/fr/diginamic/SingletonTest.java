@@ -16,6 +16,7 @@ public class SingletonTest {
 	@Before
 	public void setUp() {
 		singleton = Singleton.getInstance();
+//		assertNotNull(singleton);
 	}
 
 	@Test
